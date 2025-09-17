@@ -1,0 +1,37 @@
+/* 
+  Localizable.strings
+  Bruma
+
+  Created by José Ramón Ortiz Castañeda on 16/09/25.
+  
+*/
+// main view
+"game_name" = "bruma";
+"welcome_title" = "Bienvenido \na";
+"new_around" = "¿Nuevo por aquí?";
+"go_rules" = "Ver las reglas";
+
+// register view
+"players_names" = "Nombres de los jugadores";
+"players_count" = "%@ jugadores";
+
+"add_new_player" = "Añadir nuevo jugador";
+"name_input_placeholder" = "Escribe un nombre";
+"looks_great" = "Se ve bien";
+"register_list_placeholder" = "Añade jugadores\nusando el símbolo +";
+
+// NFC Reader MODEL
+"successful_reading" = "Registro exitoso";
+"nfc_reading_instructions" = "Acerca el dispositivo al token";
+"nfc_retry" = "Ocurrió un error, inténtalo de nuevo";
+"nfc_unsupported" = "Tipo de tag no soportado";
+"nfc_undetected" = "No se detectó ningún tag";
+
+// NFC Reader VIEW
+"nfc_register_button" = "Registar token NFC";
+"nfc_error_alert" = "Ocurrió un error en la lectura";
+
+"reading_unavailable_error" = "Este dispositivo no soporta NFC o está desactivado";
+"no_tags_detected_error" = "Este dispositivo no soporta NFC o está desactivado";
+"connection_failed_error" = "No se pudo conectar con el tag";
+"unsupported_tag_error" = "El tag detectado no es compatible";

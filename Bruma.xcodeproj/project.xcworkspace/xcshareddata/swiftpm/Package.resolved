@@ -1,0 +1,15 @@
+{
+  "originHash" : "81bfc6ea9ee38af99d02d659c48b349235bf5b658f31a7737d90247cccfc03b2",
+  "pins" : [
+    {
+      "identity" : "localize-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:marmelroy/Localize-Swift.git",
+      "state" : {
+        "revision" : "0aa221fed0512772eaad04171d966b8d77b15212",
+        "version" : "3.2.0"
+      }
+    }
+  ],
+  "version" : 3
+}
