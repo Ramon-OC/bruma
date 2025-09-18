@@ -42,17 +42,34 @@ struct RegisterView: View {
                     
                     // MARK: - LIST OF REGISTERED PLAYERS
                     List {
-                        ForEach(vm.playersNames, id: \.self) { name in
-                            RegisterRowView(playerName: name)
+                        ForEach(vm.players) { player in
+                            RegisterRowView(playerName: player.name)
                                 .listRowBackground(Color.black)
                         }
                         .onDelete(perform: vm.deletePlayer)
                     }
                     .background(Color.black)
                     .listStyle(.plain)
+                    // MARK: - NEXT VIEW BUTTON
+                    if vm.enoughtPlayers {
+                        NavigationLink(
+                            destination: RevealView().navigationBarHidden(true),
+                            label: {
+                                Text(vm.looks_great)
+                                    .font(.custom("Helvetica", size: 15))
+                                    .frame(minWidth: 100, maxWidth: 200)
+                                    .background(Color.mediumBlue)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(10)
+                                    .padding()
+                            }
+                        )
+                        .simultaneousGesture(TapGesture().onEnded {
+                            vm.startGame()
+                        })
+                    }
                 }
                 .rotation3DEffect(Angle(degrees: showRegisterBox ? 5 : 0), axis: (x: 1, y: 0, z: 0))
-                .offset(y: showRegisterBox ? -50 : 0)
                 .animation(.easeOut, value: showRegisterBox)
                 .background(.black)
                 
@@ -62,17 +79,20 @@ struct RegisterView: View {
                 }
                 
                 // MARK: - ADD PLAYERS NAME INPUT
-                if showRegisterBox{
-                    BlankView(bgColor: .black)
-                        .opacity(0.5)
-                        .onTapGesture {
-                            self.showRegisterBox = false
-                        }
-                    NameInputBoxView(isShow: $showRegisterBox, onSubmit: { name in
-                        vm.addPlayerNama(name: name)
-                    })
+                if showRegisterBox {
+                    VStack {
+                        BlankView(bgColor: .black)
+                            .opacity(0.8)
+                            .onTapGesture {
+                                self.showRegisterBox = false
+                            }
+                        Spacer()
+                        NameInputBoxView(isShow: $showRegisterBox, containsNFCToken: vm.containsNFCToken, onSubmit: { player in
+                            vm.addPlayer(player: player)
+                        })
+                        .padding([.horizontal, .bottom])
+                    }
                 }
-                
             }
         }
     }

@@ -9,7 +9,7 @@ import Foundation
 
 extension NFCRegisterButtonView{
     class ViewModel: ObservableObject{
-        
+                
         var nfc_error_alert: String = "nfc_error_alert".translated()
         var nfc_register_button: String = "nfc_register_button".translated()
         var reading_unavailable_error: String = "reading_unavailable_error".translated()

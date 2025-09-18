@@ -12,6 +12,8 @@
 "go_rules" = "Ver las reglas";
 
 // register view
+"step_no" = "Paso %@";
+
 "players_names" = "Nombres de los jugadores";
 "players_count" = "%@ jugadores";
 
@@ -19,6 +21,8 @@
 "name_input_placeholder" = "Escribe un nombre";
 "looks_great" = "Se ve bien";
 "register_list_placeholder" = "Añade jugadores\nusando el símbolo +";
+"token_input_instruction" = "1. Asocia un token para el jugador, cambiará a color verde cuando se registre exitosamente";
+"name_input_instruction" = "2. Escribe el nombre del jugador";
 
 // NFC Reader MODEL
 "successful_reading" = "Registro exitoso";
@@ -35,3 +39,20 @@
 "no_tags_detected_error" = "Este dispositivo no soporta NFC o está desactivado";
 "connection_failed_error" = "No se pudo conectar con el tag";
 "unsupported_tag_error" = "El tag detectado no es compatible";
+"nfc_already_registeres" = "Ya está registrado este token, intenta con otro";
+
+// Reveal role
+"reveal_role_title" = "Revelación de Rol";
+"remain_reveals" = "Faltan %@ jugadores";
+"press_to_hide" = "Presiona para ocultar";
+"hello_name" = "¡Hola %@!";
+
+
+// Player role
+"fish" = "Pez";
+"hook" = "Anzuelo";
+"fisherman" = "Pescador";
+
+"afi_fish" = "[pes]";
+"afi_hook" = "[anˈθwelo]";
+"afi_fisherman" = "[peskaˈðoɾ]";

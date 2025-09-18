@@ -10,11 +10,12 @@ import CoreNFC
 
 struct NFCRegisterButtonView: View {
     @StateObject var vm = ViewModel()
-    
+    var buttonMessage: String
+    @Binding var isValidNFC: Bool           // for closing add box
     var onSubmit: (String) -> Void
     @State private var showAlert = false
     @State private var alertMessage = ""
-    
+
     var body: some View {
         HStack{
             Button(action: {
@@ -51,10 +52,10 @@ struct NFCRegisterButtonView: View {
                 }
             }, label: {
                 Image(systemName: "wave.3.left.circle.fill")
-                    .font(.headline)
-                    .foregroundColor(.gray)
+                    .font(.title3)
+                    .foregroundColor(isValidNFC ? .green : .gray)
                 Text(vm.nfc_register_button)
-                    .font(.headline)
+                    .font(.title3)
             })
         }
         .alert(isPresented: $showAlert) {
