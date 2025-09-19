@@ -16,12 +16,10 @@ struct RevealRoleView: View {
                 Text(vm.reveal_role_title)
                     .font(.custom("Helvetica", size: 30))
                     .fontWeight(.bold)
-                    .foregroundColor(.black)
                 
                 Text(vm.remain_reveals)
                     .font(.custom("Helvetica", size: 30))
                     .fontWeight(.light)
-                    .foregroundColor(.black)
             }
             
             RoleCardView(isFlipped: $vm.isCardFlipped, frontCardImage: "RoleCard", roleSymbol: vm.roleImage, roleName: vm.roleName, roleAFI: vm.rolePhonetic)
@@ -32,7 +30,7 @@ struct RevealRoleView: View {
                     PulsingText(text: vm.press_to_hide)
                 }else{
                     
-                    NFCRegisterButtonView(buttonMessage: vm.nfc_reveal_button, isValidNFC: vm.isValidNFC) { nfcToken in
+                    NFCRegisterButtonView(buttonIsDisabled: false, buttonMessage: vm.nfc_reveal_button, turnGreenButton: vm.isValidNFC) { nfcToken in
                         vm.isCardFlipped = true
                         vm.queryPlayer(token: nfcToken)
                     }

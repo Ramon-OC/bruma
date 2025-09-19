@@ -28,8 +28,8 @@
             filePath = "Bruma/View/RegisterView/NFCRegisterButtonView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -64,36 +64,6 @@
             endingLineNumber = "49"
             landmarkName = "getGameWord()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "810E0CF9-3588-4071-8ADA-F6350EB30C34 - e2fd69a9e98f95"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Bruma.Game.distributionOfRoles() -&gt; ()"
-                  moduleName = "Bruma.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/joseramonortizcastaneda/Documents/Bruma/Bruma/Model/Game/Game.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "51"
-                  endingLineNumber = "51">
-               </Location>
-               <Location
-                  uuid = "810E0CF9-3588-4071-8ADA-F6350EB30C34 - df3c097dd9adf509"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Bruma.Game.getGameWord() -&gt; (Swift.String, Swift.String)"
-                  moduleName = "Bruma.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/joseramonortizcastaneda/Documents/Bruma/Bruma/Model/Game/Game.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "49"
-                  endingLineNumber = "49">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -110,36 +80,6 @@
             endingLineNumber = "41"
             landmarkName = "beginGame(players:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "866E8B53-F101-4E57-9927-4FC426236A52 - bd89db64cb1a432e"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Bruma.Game.beginGame(players: Swift.Array&lt;Bruma.Player&gt;) -&gt; ()"
-                  moduleName = "Bruma.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/joseramonortizcastaneda/Documents/Bruma/Bruma/Model/Game/Game.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "41"
-                  endingLineNumber = "41">
-               </Location>
-               <Location
-                  uuid = "866E8B53-F101-4E57-9927-4FC426236A52 - f4eb10a07c3fe06"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Bruma.Card&gt;) -&gt; () in Bruma.Game.beginGame(players: Swift.Array&lt;Bruma.Player&gt;) -&gt; ()"
-                  moduleName = "Bruma.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/joseramonortizcastaneda/Documents/Bruma/Bruma/Model/Game/Game.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "42"
-                  endingLineNumber = "42">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

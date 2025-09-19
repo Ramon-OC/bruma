@@ -10,8 +10,9 @@ import CoreNFC
 
 struct NFCRegisterButtonView: View {
     @StateObject var vm = ViewModel()
+    var buttonIsDisabled: Bool
     var buttonMessage: String
-    var isValidNFC: Bool           // for closing add box
+    var turnGreenButton: Bool           // for closing add box
     var onSubmit: (String) -> Void
     @State private var showAlert = false
     @State private var alertMessage = ""
@@ -53,10 +54,11 @@ struct NFCRegisterButtonView: View {
             }, label: {
                 Image(systemName: "wave.3.left.circle.fill")
                     .font(.title3)
-                    .foregroundColor(isValidNFC ? .green : .gray)
+                    .foregroundColor(turnGreenButton ? .green : .gray)
                 Text(buttonMessage)
                     .font(.title3)
             })
+            .disabled(buttonIsDisabled)
         }
         .alert(isPresented: $showAlert) {
             Alert(

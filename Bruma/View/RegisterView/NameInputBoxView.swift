@@ -56,8 +56,8 @@ struct NameInputBoxView: View {
                     .lineLimit(2)
                     .fixedSize(horizontal: false, vertical: true)
                     .font(.caption)
-                    .foregroundStyle(.secondary)
-                NFCRegisterButtonView(buttonMessage: vm.nfc_register_button, isValidNFC: vm.isValidNFC) { nfcToken in
+                    .foregroundColor(Color.gray)
+                NFCRegisterButtonView(buttonIsDisabled: false, buttonMessage: vm.nfc_register_button, turnGreenButton: vm.isValidNFC) { nfcToken in
                     if !containsNFCToken(nfcToken) {
                         vm.setNfcToken(nfcToken: nfcToken)
                     }else{
@@ -78,7 +78,7 @@ struct NameInputBoxView: View {
             VStack(alignment: .leading, spacing: 10){
                 Text(vm.name_input_instruction)
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundColor(Color.gray)
                 TextField(vm.name_input_placeholder, text: $vm.playersName, onEditingChanged: { (editingChanged) in
                     isEditing = editingChanged
                 })

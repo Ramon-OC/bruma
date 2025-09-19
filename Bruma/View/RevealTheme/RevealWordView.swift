@@ -28,12 +28,11 @@ struct RevealWordView: View {
                     Text(vm.remain_reveals)
                         .font(.custom("Helvetica", size: 25))
                         .fontWeight(.thin)
-                        .foregroundColor(.black)
                         .frame(maxWidth: .infinity, alignment: .center)
                     
                     ScratchWordView(points: $points, isScratchingEnabled: $vm.isScratchingEnabled, keyword: vm.word, keywordAFI: vm.wordAFI)
                     
-                    NFCRegisterButtonView(buttonMessage: vm.nfc_reveal_button, isValidNFC: vm.isScratchingEnabled) { nfcToken in
+                    NFCRegisterButtonView(buttonIsDisabled: vm.isScratchingEnabled, buttonMessage: vm.nfc_reveal_button, turnGreenButton: vm.isScratchingEnabled) { nfcToken in
                         vm.queryPlayer(token: nfcToken)
                     }
                     

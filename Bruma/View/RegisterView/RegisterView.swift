@@ -16,6 +16,7 @@ struct RegisterView: View {
     var body: some View {
         NavigationView{
             ZStack {
+                Color.black.ignoresSafeArea()
                 // MARK: - HEADER AND ADD BUTTON
                 VStack{
                     HStack{
@@ -51,14 +52,14 @@ struct RegisterView: View {
                     .background(Color.black)
                     .listStyle(.plain)
                     // MARK: - NEXT VIEW BUTTON
-                    if vm.enoughtPlayers {
+                    if vm.enoughtPlayers {                        
                         NavigationLink(
                             destination: RevealRoleView().navigationBarHidden(true),
                             label: {
                                 Text(vm.looks_great)
-                                    .font(.custom("Helvetica", size: 15))
-                                    .frame(minWidth: 100, maxWidth: 200)
-                                    .background(Color.mediumBlue)
+                                    .font(.custom("Helvetica", size: 25))
+                                    .frame(minWidth: 200, minHeight: 40)
+                                    .background(Color.mediumGreen)
                                     .foregroundColor(.white)
                                     .cornerRadius(10)
                                     .padding()
