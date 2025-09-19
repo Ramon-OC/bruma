@@ -57,7 +57,7 @@ struct NameInputBoxView: View {
                     .fixedSize(horizontal: false, vertical: true)
                     .font(.caption)
                     .foregroundStyle(.secondary)
-                NFCRegisterButtonView(buttonMessage: vm.nfc_register_button,isValidNFC: $vm.isValidNFC) { nfcToken in
+                NFCRegisterButtonView(buttonMessage: vm.nfc_register_button, isValidNFC: vm.isValidNFC) { nfcToken in
                     if !containsNFCToken(nfcToken) {
                         vm.setNfcToken(nfcToken: nfcToken)
                     }else{

@@ -12,12 +12,13 @@ enum gameMode {
     case manualGame
 }
 
-
 class Game{
-    var players: [Player] = []
-    var gameMode: gameMode = .manualGame
-    var hookInsider: Int?
-    var fishermanInsider: Int?
+    private(set) var players: [Player] = []
+    private(set) var card: Card?
+    private(set) var wordIndex: Int = 0
+    private(set) var gameMode: gameMode = .nfcGame
+    private(set) var hookIndex: Int?
+    private(set) var fishermanIndex: Int?
     
     static var shared: Game = {
         let instance = Game()
@@ -26,13 +27,26 @@ class Game{
     
     func resetGame(){
         players = []
-        hookInsider = nil
-        fishermanInsider = nil
+        card = nil
+        wordIndex = 0
+        hookIndex = nil
+        fishermanIndex = nil
     }
     
     func beginGame(players: [Player]){
+        // random roles
         self.players = players
         distributionOfRoles()
+        // random card
+        CardManager.shared.getRandomCard { card in
+            self.card = card
+        }
+        print(card?.words ?? "LA CARTA ESTA VACIA")
+        self.wordIndex = Int.random(in: 0...4)
+    }
+    
+    func getGameWord() -> (String, String) {
+        return (card?.words[wordIndex] ?? "WORD", card?.afiWords[wordIndex] ?? "AFI")
     }
     
     private func distributionOfRoles() {
@@ -45,8 +59,8 @@ class Game{
         players[randomIndices[0]].role = .hook
         players[randomIndices[1]].role = .fisherman
         
-        self.hookInsider = randomIndices[0]
-        self.fishermanInsider = randomIndices[1]
+        self.hookIndex = randomIndices[0]
+        self.fishermanIndex = randomIndices[1]
     }
-    
+
 }

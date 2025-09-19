@@ -44,8 +44,9 @@
 // Reveal role
 "reveal_role_title" = "Revelación de Rol";
 "remain_reveals" = "Faltan %@ jugadores";
-"press_to_hide" = "Presiona para ocultar";
+"press_to_hide" = "Presiona la tarjeta para ocultar";
 "hello_name" = "¡Hola %@!";
+"nfc_reveal_button" = "Leer el token de un jugador";
 
 
 // Player role
@@ -56,3 +57,11 @@
 "afi_fish" = "[pes]";
 "afi_hook" = "[anˈθwelo]";
 "afi_fisherman" = "[peskaˈðoɾ]";
+
+// Cards
+"json_file_name" = "spanish-cards";
+
+// reveal word
+"scratch_title" = "¡Rasca!";
+"scratch_instruction" = "Para revelar la pista del juego";
+"hide_word_button" = "Ocultar palabra";

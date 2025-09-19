@@ -17,9 +17,9 @@ struct RoleCardView: View {
     // front card info
     var frontCardImage = "RoleCard"
     // back card info
-    @State var roleSymbol: String
-    @State var roleName: String
-    @State var roleAFI: String
+    var roleSymbol: String
+    var roleName: String
+    var roleAFI: String
         
     var body: some View {
         ZStack {
@@ -62,7 +62,7 @@ struct RoleCardView: View {
                 .resizable()
                 .foregroundStyle(
                     LinearGradient(
-                        colors: [.mediumBlue],
+                        colors: [.red, .blue, .green, .pink],
                         startPoint: .topLeading,
                         endPoint: .bottomTrailing
                     )

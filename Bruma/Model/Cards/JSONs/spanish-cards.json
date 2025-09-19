@@ -1,0 +1,73 @@
+[
+  {
+    "id": 1,
+    "words": ["avion", "metro", "auto", "bicicleta", "barco"],
+    "afiWords": ["aˈβjon", "ˈmetɾo", "ˈawto", "βiθiˈkleta", "ˈbaɾko"],
+    "keyword": "vehiculos",
+    "keywordAFI": "βeˈikulos"
+  },
+  {
+    "id": 2,
+    "words": ["casa", "ventana", "puerta", "techo", "jardin"],
+    "afiWords": ["ˈkasa", "benˈtana", "ˈpweɾta", "ˈtetʃo", "xaɾˈðin"],
+    "keyword": "vivienda",
+    "keywordAFI": "biˈβjenda"
+  },
+  {
+    "id": 3,
+    "words": ["manzana", "naranja", "platano", "uva", "fresa"],
+    "afiWords": ["manˈθana", "naˈɾaŋxa", "ˈplatano", "ˈuβa", "ˈfɾesa"],
+    "keyword": "frutas",
+    "keywordAFI": "ˈfɾutas"
+  },
+  {
+    "id": 4,
+    "words": ["perro", "gato", "pajaro", "pez", "conejo"],
+    "afiWords": ["ˈpeřo", "ˈɣato", "ˈpaxaɾo", "peθ", "koˈnexo"],
+    "keyword": "mascotas",
+    "keywordAFI": "masˈkotas"
+  },
+  {
+    "id": 5,
+    "words": ["profesor", "estudiante", "libro", "lapiz", "pizarra"],
+    "afiWords": ["pɾofεˈsoɾ", "estuˈðjante", "ˈliβɾo", "ˈlapiθ", "piˈθařa"],
+    "keyword": "aula",
+    "keywordAFI": "ˈawla"
+  },
+  {
+    "id": 6,
+    "words": ["camisa", "pantalon", "zapatos", "sombrero", "corbata"],
+    "afiWords": ["kaˈmisa", "pantaˈlon", "θaˈpatos", "somˈbɾeɾo", "koɾˈβata"],
+    "keyword": "vestimenta",
+    "keywordAFI": "bestiˈmenta"
+  },
+  {
+    "id": 7,
+    "words": ["cocina", "refrigerador", "estufa", "mesa", "silla"],
+    "afiWords": ["koˈθina", "řefɾixeɾaˈðoɾ", "esˈtufa", "ˈmesa", "ˈsiʎa"],
+    "keyword": "hogar",
+    "keywordAFI": "oˈɣaɾ"
+  },
+  {
+    "id": 8,
+    "words": ["medico", "enfermera", "hospital", "medicina", "paciente"],
+    "afiWords": ["ˈmeðiko", "enfeɾˈmeɾa", "ospiˈtal", "meðiˈθina", "paˈθjente"],
+    "keyword": "salud",
+    "keywordAFI": "saˈluð"
+  },
+  {
+    "id": 9,
+    "words": ["musica", "guitarra", "piano", "cantar", "bailar"],
+    "afiWords": ["ˈmusika", "ɣiˈtařa", "ˈpjano", "kanˈtaɾ", "bajˈlaɾ"],
+    "keyword": "melodia",
+    "keywordAFI": "meloˈðia"
+  },
+  {
+    "id": 10,
+    "words": ["futbol", "basquet", "tenis", "natacion", "correr"],
+    "afiWords": ["ˈfutβol", "ˈbasket", "ˈtenis", "nataˈθjon", "koˈřeɾ"],
+    "keyword": "deportes",
+    "keywordAFI": "deˈpoɾtes"
+  }
+]
+

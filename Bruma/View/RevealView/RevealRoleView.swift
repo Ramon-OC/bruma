@@ -7,10 +7,8 @@
 
 import SwiftUI
 
-struct RevealView: View {
-    @StateObject var vm = RevealView.ViewModel()
-    @State private var showAlert = false
-    @State private var alertMessage = ""
+struct RevealRoleView: View {
+    @StateObject var vm = RevealRoleView.ViewModel()
     
     var body: some View {
         VStack(alignment: .center, spacing: 20){
@@ -28,22 +26,25 @@ struct RevealView: View {
             
             RoleCardView(isFlipped: $vm.isCardFlipped, frontCardImage: "RoleCard", roleSymbol: vm.roleImage, roleName: vm.roleName, roleAFI: vm.rolePhonetic)
             
-            // MARK: NFC READER INPUT
+            // MARK: NFC READER INPUT // TAP TO FLIP // GO TO NEXT VIEW
             VStack(alignment: .center, spacing: 10){
                 if vm.isCardFlipped{
                     PulsingText(text: vm.press_to_hide)
+                }else{
+                    
+                    NFCRegisterButtonView(buttonMessage: vm.nfc_reveal_button, isValidNFC: vm.isValidNFC) { nfcToken in
+                        vm.isCardFlipped = true
+                        vm.queryPlayer(token: nfcToken)
+                    }
+                    .padding(.vertical)
+                    
+                    NavigationLink(
+                        destination: RevealWordView().navigationBarHidden(true),
+                        label: {
+                            Text("TEST")
+                        })
                 }
-                NFCRegisterButtonView(buttonMessage: vm.nfc_register_button ,isValidNFC: $vm.isValidNFC) { nfcToken in
-                    vm.isCardFlipped = true
-                    vm.queryPlayer(token: nfcToken)
-                }
-            }
-            .alert(isPresented: $showAlert) {
-                Alert(
-                    title: Text("TEXTO"),
-                    message: Text(alertMessage),
-                    dismissButton: .default(Text("Ok"))
-                )
+
             }
         }
     }
@@ -72,5 +73,5 @@ struct PulsingText: View {
 }
 
 #Preview {
-    RevealView()
+    RevealRoleView()
 }

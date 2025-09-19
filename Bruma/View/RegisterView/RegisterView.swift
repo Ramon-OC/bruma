@@ -53,7 +53,7 @@ struct RegisterView: View {
                     // MARK: - NEXT VIEW BUTTON
                     if vm.enoughtPlayers {
                         NavigationLink(
-                            destination: RevealView().navigationBarHidden(true),
+                            destination: RevealRoleView().navigationBarHidden(true),
                             label: {
                                 Text(vm.looks_great)
                                     .font(.custom("Helvetica", size: 15))

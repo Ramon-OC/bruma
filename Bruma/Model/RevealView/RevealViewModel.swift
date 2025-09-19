@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension RevealView{
+extension RevealRoleView{
     class ViewModel: ObservableObject{
         
         @Published var queriedPlayerIds: Set<String> = []
@@ -27,6 +27,7 @@ extension RevealView{
         var roleImage: String { currentUserRole.imageName }
         
         var noPlayers: Int { players.count }
+        var remainPlayers: Int {players.count - queriedPlayerIds.count}
         
         init(){
             self.players = Game.shared.players
@@ -38,18 +39,18 @@ extension RevealView{
             }
             
             if let player = players.first(where: { $0.nfcToken == token }) {
+                self.isValidNFC = true
                 self.currentUserRole = player.role
+                self.currentPlayerName = player.name
                 queriedPlayerIds.insert(token)
+                print("Jugador: \(currentPlayerName). Rol: \(currentUserRole).")
             }
         }
 
         // strings
         var reveal_role_title: String = "reveal_role_title".translated()
-        var remain_reveals: String { "remain_reveals".translated(with: String(queriedPlayerIds.count)) }
+        var remain_reveals: String { "remain_reveals".translated(with: String(remainPlayers)) }
         var press_to_hide: String { "press_to_hide".translated() }
-        var nfc_register_button: String {
-            isCardFlipped ? "nfc_register_button".translated() :
-                            "hello_name".translated(with: currentPlayerName)
-        }
+        var nfc_reveal_button: String { "nfc_reveal_button".translated() }
     }
 }
