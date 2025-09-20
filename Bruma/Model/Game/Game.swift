@@ -49,6 +49,10 @@ class Game{
         return (card?.words[wordIndex] ?? "WORD", card?.afiWords[wordIndex] ?? "AFI")
     }
     
+    func getGameKeyword() -> (String, String) {
+        return (card?.keyword ?? "KEYWORD", card?.keywordAFI ?? "AFI")
+    }
+    
     private func distributionOfRoles() {
         guard players.count >= 2 else {
             return

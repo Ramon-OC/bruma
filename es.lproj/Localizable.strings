@@ -46,6 +46,7 @@
 "remain_reveals" = "Faltan %@ jugadores";
 "press_to_hide" = "Presiona la tarjeta para ocultar";
 "hello_name" = "¡Hola %@!";
+"memorize_keyword_user" = "Memoriza la pista %@";
 "nfc_reveal_button" = "Leer el token de un jugador";
 
 
@@ -62,6 +63,11 @@
 "json_file_name" = "spanish-cards";
 
 // reveal word
-"scratch_title" = "¡Rasca!";
-"scratch_instruction" = "Para revelar la pista del juego";
-"hide_word_button" = "Ocultar palabra";
+"scratch_title" = "Pista del Juego";
+"scratch_instruction" = "Todos menos el pescador deben raspar la tarjeta para revelar la palabra clave del juego";
+"hide_word_button" = "Presiona aquí para ocultar la tarjeta";
+
+"known_word" = "¡Ya conoces esta palabra!";
+"fisherman_reveal_word" = "Esta tarjeta es de un pescador";
+"game_word_message" = "Psst... esta es la palabra del juego";
+"game_hint_message" = "Esta es la pista del juego";

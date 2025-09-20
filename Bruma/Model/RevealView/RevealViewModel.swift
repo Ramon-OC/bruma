@@ -17,8 +17,9 @@ extension RevealRoleView{
         
         // view states
         @Published var isCardFlipped: Bool = false
+        var allPlayersHaveScanned: Bool { queriedPlayerIds.count == players.count }
 
-        // view s
+        // view elements
         @Published var currentPlayerName: String = "name"
         @Published var currentUserRole: PlayerRole = .fish
 
@@ -43,7 +44,7 @@ extension RevealRoleView{
                 self.currentUserRole = player.role
                 self.currentPlayerName = player.name
                 queriedPlayerIds.insert(token)
-                print("Jugador: \(currentPlayerName). Rol: \(currentUserRole).")
+                //print("Jugador: \(currentPlayerName). Rol: \(currentUserRole).")
             }
         }
 

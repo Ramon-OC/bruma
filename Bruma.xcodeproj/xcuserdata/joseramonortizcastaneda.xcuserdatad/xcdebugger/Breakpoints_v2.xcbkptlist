@@ -44,8 +44,8 @@
             filePath = "Bruma/Model/RevealTheme/RevealThemeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "init()"
             landmarkType = "7">
          </BreakpointContent>
@@ -95,6 +95,22 @@
             startingLineNumber = "42"
             endingLineNumber = "42"
             landmarkName = "beginGame(players:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AA985CA5-ADB3-49B2-9E3B-31E97EDF6F46"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bruma/Model/RevealTheme/RevealThemeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "queryPlayer(token:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
